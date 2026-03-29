@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angelo Callocallo | Professional Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-glow"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Angelo.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact" class="btn btn-primary" style="padding: 0.6rem 2rem; color:white;">Contact Me</a></li>
+            <li>
+                <button id="themeToggle" class="theme-toggle" style="background:transparent; box-shadow:none; font-size:1.4rem;">🌞</button>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content fade-in">
+                <h1 style="color: var(--text-main); font-size: 3.5rem; margin-bottom: 1.5rem;">Hi, I'm <span style="background: linear-gradient(45deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Angelo Callocallo</span></h1>
+                <p>Expert in <span style="color: var(--primary);">C# Programming</span>, <span style="color: var(--secondary);">AI implementation</span>, and modern <span style="color: var(--primary);">Web Design (HTML, CSS, JS, MySQL)</span>. Dedicated to building high-performance professional digital solutions.</p>
+                <div class="actions" style="margin-top: 2rem;">
+                    <a href="#projects" class="btn btn-primary">View Portfolio</a>
+                    <a href="#contact" class="btn" style="background: var(--clay-bg); box-shadow: var(--clay-shadow-out); margin-left:1rem; color:var(--text-main);">Expert Solutions</a>
+                </div>
+            </div>
+            <div class="hero-image fade-in">
+                <div class="profile-container">
+                    <img src="Images/Profile/56236048_2341531372759169_5256167301668929536_n.jpg" alt="Angelo Callocallo">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2 class="section-title" style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">About My Expertise</h2>
+            <div class="clay-card fade-in" style="max-width: 1000px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.8;">
+                    I specialize in building visually stunning and highly functional user interfaces. My approach combines the principles of modern design with robust engineering to deliver seamless digital experiences. With a focus on performance and cross-platform compatibility, I ensure that every project meets the highest professional standards.
+                </p>
+                <div style="display: flex; gap: 1rem; margin-top: 3rem; flex-wrap: wrap; justify-content: center;">
+                    <span class="btn" style="background: var(--clay-bg); box-shadow: var(--clay-shadow-in); border-radius: 12px; font-size: 0.9rem; pointer-events:none; color: var(--text-muted);">Web Development</span>
+                    <span class="btn" style="background: var(--clay-bg); box-shadow: var(--clay-shadow-in); border-radius: 12px; font-size: 0.9rem; pointer-events:none; color: var(--text-muted);">C# Programming</span>
+                    <span class="btn" style="background: var(--clay-bg); box-shadow: var(--clay-shadow-in); border-radius: 12px; font-size: 0.9rem; pointer-events:none; color: var(--text-muted);">HTML / CSS / JS</span>
+                    <span class="btn" style="background: var(--clay-bg); box-shadow: var(--clay-shadow-in); border-radius: 12px; font-size: 0.9rem; pointer-events:none; color: var(--text-muted);">MySQL Database</span>
+                    <span class="btn" style="background: var(--clay-bg); box-shadow: var(--clay-shadow-in); border-radius: 12px; font-size: 0.9rem; pointer-events:none; color: var(--text-muted);">AI Strategy & Implementation</span>
+                    <span class="btn" style="background: var(--clay-bg); box-shadow: var(--clay-shadow-in); border-radius: 12px; font-size: 0.9rem; pointer-events:none; color: var(--text-muted);">Graphic Design</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section with Carousel -->
+        <section id="certificates">
+            <h2 class="section-title" style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">Professional Certifications</h2>
+            <div class="carousel-container fade-in">
+                <button class="carousel-btn prev-btn">‹</button>
+                <div class="carousel-track">
+                    <div class="carousel-slide"><img src="Images/Certificates/Callocallo (1).png" alt="Cert 1" onclick="openModal(this)"></div>
+                    <div class="carousel-slide"><img src="Images/Certificates/Callocallo (2).png" alt="Cert 2" onclick="openModal(this)"></div>
+                    <div class="carousel-slide"><img src="Images/Certificates/Callocallo (3).png" alt="Cert 3" onclick="openModal(this)"></div>
+                    <div class="carousel-slide"><img src="Images/Certificates/Callocallo (4).png" alt="Cert 4" onclick="openModal(this)"></div>
+                    <div class="carousel-slide"><img src="Images/Certificates/Callocallo (5).png" alt="Cert 5" onclick="openModal(this)"></div>
+                    <div class="carousel-slide"><img src="Images/Certificates/Callocallo (6).png" alt="Cert 6" onclick="openModal(this)"></div>
+                    <div class="carousel-slide"><img src="Images/Certificates/Callocallo (7).png" alt="Cert 7" onclick="openModal(this)"></div>
+                    <div class="carousel-slide" onclick="window.open('Images/Certificates/ANGELO G. CALLOCALLO.pdf', '_blank')" style="position: relative;">
+                        <div style="width: 100%; aspect-ratio: 4/3; background: var(--clay-bg); border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: var(--clay-shadow-out);">
+                            <span style="font-size: 3rem;">📄</span>
+                            <p style="font-size: 0.7rem; color: var(--text-muted); margin-top: 0.5rem; font-weight: 600; text-align: center; padding: 0 10px;">ANGELO G. CALLOCALLO.pdf</p>
+                            <p style="font-size: 0.6rem; color: var(--primary); font-weight: 700;">(Click to View PDF)</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next-btn">›</button>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="clay-card contact-form fade-in" style="max-width: 650px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 2.2rem; margin-bottom: 2rem; color: var(--text-main);">Get In Touch</h2>
+                <div style="background: var(--clay-bg); box-shadow: var(--clay-shadow-in); padding: 1.5rem; border-radius: 20px; margin-bottom: 3rem; border: 1px dashed var(--primary);">
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 500;">Direct Professional Inquiry</p>
+                    <p id="email-display" style="color: var(--primary); font-family: monospace; font-size: 1.3rem; font-weight: 700; word-break: break-all; cursor: pointer;" title="Click to copy">angelocallocallo1111@gmail.com</p>
+                    <span id="copy-feedback" style="font-size: 0.75rem; color: var(--secondary); opacity: 0; transition: 0.3s;">Copied!</span>
+                </div>
+                
+                <form action="https://formspree.io/f/mqegpdzo" method="POST">
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <input type="text" name="name" id="name" placeholder="Full Name" required style="width: 100%; padding: 1.2rem; border-radius: 16px; border: none; background: var(--clay-bg); box-shadow: var(--clay-shadow-in); color: var(--text-main); outline: none;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <input type="email" name="email" id="email" placeholder="example@company.com" required style="width: 100%; padding: 1.2rem; border-radius: 16px; border: none; background: var(--clay-bg); box-shadow: var(--clay-shadow-in); color: var(--text-main); outline: none;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 2.5rem;">
+                        <textarea name="message" id="message" rows="5" placeholder="Inquiry details..." required style="width: 100%; padding: 1.2rem; border-radius: 16px; border: none; background: var(--clay-bg); box-shadow: var(--clay-shadow-in); color: var(--text-main); outline: none;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.2rem; cursor: pointer;">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for certificates -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">×</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <footer style="padding: 4rem 10% 2rem; text-align: center; opacity: 0.8;">
+        <p style="color: var(--text-muted);">&copy; 2024 Angelo Callocallo. Built with AI-integrated craftsmanship.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
