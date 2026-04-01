@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume | Angelo G. Callocallo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #64748b;
+            --bg: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border: #e2e8f0;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .resume-paper {
+            max-width: 950px;
+            margin: 0 auto;
+            background: var(--white);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            min-height: 1100px;
+            border: 1px solid var(--border);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #f1f5f9;
+            padding: 40px 30px;
+            border-right: 1px solid var(--border);
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--white);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .sidebar h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--primary);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1.5px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        .contact-info p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .personal-data p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .personal-data strong {
+            color: var(--text-main);
+            display: inline-block;
+            width: 100px;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: var(--white);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            margin-right: 5px;
+            border: 1px solid var(--border);
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 50px 60px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .content-card {
+            margin-bottom: 25px;
+        }
+
+        .objective-text {
+            color: var(--text-muted);
+            font-style: italic;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .item-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--text-main);
+        }
+
+        .item-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .item-org {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        .item-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Nav Buttons */
+        .nav-actions {
+            max-width: 950px;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .back-btn {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.2s;
+        }
+
+        .back-btn:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .resume-paper {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .main-content {
+                padding: 40px 30px;
+            }
+        }
+
+        /* Print Optimization */
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+
+            .resume-paper {
+                box-shadow: none;
+                border: none;
+            }
+
+            .nav-actions {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-actions">
+        <a href="index.html" class="back-btn">← Back to Portfolio</a>
+        <button onclick="window.print()" class="back-btn" style="cursor: pointer; background: none; border: none;">🖨️
+            Print as PDF</button>
+    </div>
+
+    <div class="resume-paper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <img src="Images/Profile/56236048_2341531372759169_5256167301668929536_n.jpg" alt="Angelo G. Callocallo"
+                    class="profile-img">
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact Info</h3>
+                <p>📍 Polomolok, South Cotabato</p>
+                <p>📞 09509398383</p>
+                <p>✉️ angelocallocallo1111@gmail.com</p>
+            </div>
+
+            <div class="personal-data">
+                <h3>Personal Data</h3>
+                <p><strong>Birth</strong> May 18, 2001</p>
+                <p><strong>Citizenship</strong> Filipino</p>
+                <p><strong>Sex</strong> Male</p>
+                <p><strong>Status</strong> Single</p>
+                <p><strong>Height</strong> 5'8"</p>
+                <p><strong>Weight</strong> 75kls.</p>
+                <p><strong>Religeon</strong> Roman Catholic</p>
+            </div>
+
+            <div class="skills-section">
+                <h3>Skills</h3>
+                <span class="skill-tag">Troubleshooting</span>
+                <span class="skill-tag">Customer Service</span>
+                <span class="skill-tag">Microsoft Office</span>
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Hardware</span>
+                <span class="skill-tag">C# Programming</span>
+                <span class="skill-tag">Web Design</span>
+                <span class="skill-tag">AI Strategy</span>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Angelo G. Callocallo</h1>
+                <div class="subtitle">IT Specialist & Educator</div>
+            </header>
+
+            <section class="content-card">
+                <h2 class="section-title">Objective</h2>
+                <p class="objective-text">
+                    "I am constantly looking for possibilities to join a firm where I can improve my abilities, expand
+                    my knowledge, and fulfill my full potential. I am open to investigating a variety of opportunities
+                    that will offer me with valuable perspectives and ideas."
+                </p>
+            </section>
+
+            <section class="content-card">
+                <h2 class="section-title">Work Experience</h2>
+
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Part-Time Teacher / IT Instructor</span>
+                        <span class="item-date">2023 - Present</span>
+                    </div>
+                    <div class="item-org">B.E.S.T College of Polomolok</div>
+                    <p class="item-desc">Providing high-quality IT education and instruction, focusing on modern
+                        software development and computer science fundamentals.</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Data Encoder (SAP)</span>
+                        <span class="item-date">2023</span>
+                    </div>
+                    <div class="item-org">Dole Philippines</div>
+                    <p class="item-desc">Managed data input and integrity within SAP systems, ensuring accuracy for
+                        corporate operational requirements.</p>
+                </div>
+            </section>
+
+            <section class="content-card">
+                <h2 class="section-title">Education</h2>
+
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Bachelor of Science in Information Technology</span>
+                        <span class="item-date">2019 - 2023</span>
+                    </div>
+                    <div class="item-org">B.E.S.T College of Polomolok, INC.</div>
+                    <p class="item-desc">Major in IT Infrastructure and Software Systems. Graduated with professional
+                        technical foundations.</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Secondary Education</span>
+                        <span class="item-date">2017 - 2019</span>
+                    </div>
+                    <div class="item-org">Bentung Sulit National High School</div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Elementary Education</span>
+                        <span class="item-date">2007 - 2013</span>
+                    </div>
+                    <div class="item-org">Bentung Elementary School</div>
+                </div>
+            </section>
+
+            <section class="content-card">
+                <h2 class="section-title">Seminars & Training</h2>
+
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Campus DevCon 2023</span>
+                        <span class="item-date">May 12, 2023</span>
+                    </div>
+                    <div class="item-org">General Santos City</div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Icebox Unboxing Series</span>
+                        <span class="item-date">March 29, 2023</span>
+                    </div>
+                    <div class="item-org">General Santos City</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer
+        style="margin-top: 50px; text-align: center; color: var(--text-muted); font-size: 0.8rem; padding-bottom: 20px;">
+        &copy; 2024 Angelo G. Callocallo - Professional Portfolio Resume
+    </footer>
+</body>
+
+</html>
